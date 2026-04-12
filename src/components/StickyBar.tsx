@@ -2,7 +2,7 @@ import { Phone, MessageSquare } from "lucide-react";
 
 const StickyBar = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-card/95 backdrop-blur-xl border-t border-border px-4 py-3">
+    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-xl border-t border-border px-4 py-3 shadow-lg">
       <div className="flex gap-3">
         <a
           href="#estimate"

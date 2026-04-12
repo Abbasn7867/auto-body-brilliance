@@ -17,14 +17,14 @@ const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="Auto body technician welding" width={1920} height={1080} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="absolute inset-0 gradient-hero opacity-70" />
         {/* Animated light streaks */}
         <div className="absolute top-1/3 left-0 right-0 h-px gradient-blue-streak animate-streak" />
         <div className="absolute top-2/3 left-0 right-0 h-px gradient-blue-streak animate-streak" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container relative z-10 py-20 md:py-32">
+      <div className="container relative z-10 py-20 md:py-32 text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-primary font-medium tracking-widest uppercase text-sm mb-4"
+            className="text-blue-400 font-medium tracking-widest uppercase text-sm mb-4"
           >
             Manosy Auto Body — Woodbridge, VA
           </motion.p>
@@ -45,7 +45,7 @@ const Hero = () => {
             <span className="text-primary text-glow-blue">Perfection</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-8 leading-relaxed">
             Expert collision repair, flawless paint restoration, dent removal, and 24/7 emergency towing for all makes and prestige vehicles.
           </p>
 
@@ -69,18 +69,18 @@ const Hero = () => {
           {/* Trust badges */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {trustBadges.map((badge) => (
-              <div key={badge.label} className="glass-card px-4 py-3 flex items-center gap-3">
-                <badge.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-sm font-medium text-foreground">{badge.label}</span>
+              <div key={badge.label} className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3">
+                <badge.icon className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <span className="text-sm font-medium text-white">{badge.label}</span>
               </div>
             ))}
           </div>
 
           {/* Brand strip */}
-          <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm">
+          <div className="flex flex-wrap items-center gap-4 text-white/50 text-sm">
             <span className="uppercase tracking-wider text-xs">We service:</span>
             {brands.map((brand) => (
-              <span key={brand} className="glass-card px-3 py-1 text-xs font-medium">{brand}</span>
+              <span key={brand} className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-3 py-1 text-xs font-medium text-white/80">{brand}</span>
             ))}
           </div>
         </motion.div>
